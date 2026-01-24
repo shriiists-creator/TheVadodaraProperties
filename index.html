@@ -1,0 +1,1334 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Vadodara Properties | Best Real Estate Consultant in Vadodara</title>
+    <link rel="icon" href="images/BrandLogo.png" type="image/png" fetchpriority="low">
+
+    <link rel="preload" as="image" href="images/BrandLogo.png" fetchpriority="high">
+    <link rel="preload" as="image"
+        href="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070&auto=format&fit=crop"
+        fetchpriority="high">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        onload="this.onload=null;this.rel='stylesheet'">
+
+
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+
+    <style>
+        /* --- THEME CONFIGURATION (PREMIUM DARK) --- */
+        :root {
+            --color-primary: #FF1744;
+            /* Vibrant Red */
+            --color-secondary: #e2e8f0;
+            /* Platinum/Silver */
+            --color-dark: #0f172a;
+            /* Deep Slate */
+            --color-card: #1e293b;
+            /* Lighter Slate Card */
+            --color-heading: #f8fafc;
+            /* White Headings */
+            --color-text: #94a3b8;
+            /* Light Grey Text */
+            --color-bg-light: #0f172a;
+            /* Dark background for 'light' sections */
+            --color-white: #ffffff;
+            /* Keep white for text utilities */
+
+            --radius-xl: 24px;
+            --radius-lg: 16px;
+            --shadow-hover: 0 20px 45px -10px rgba(0, 0, 0, 0.5);
+
+            --font-heading: 'Outfit', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --nav-height: 72.22px;
+        }
+
+        .section-padding {
+            padding: 5rem 0;
+        }
+
+        /* --- GLOBAL RESET --- */
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background-color: var(--color-dark);
+            /* FIXED: Dark Background */
+            overflow-x: hidden;
+            padding-top: var(--nav-height);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--font-heading);
+            color: var(--color-heading);
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .text-primary {
+            color: var(--color-primary) !important;
+        }
+
+        .text-secondary {
+            color: var(--color-secondary) !important;
+        }
+
+        /* Ensure bg-light-section is actually dark */
+        .bg-light-section {
+            background-color: #020617 !important;
+        }
+
+        /* Override Bootstrap utilities for Dark Mode */
+        .bg-white {
+            background-color: var(--color-card) !important;
+            color: var(--color-text);
+        }
+
+        .bg-light {
+            background-color: #334155 !important;
+            color: white;
+        }
+
+        .text-dark {
+            color: white !important;
+        }
+
+        .text-muted {
+            color: #94a3b8 !important;
+        }
+
+        .border,
+        .border-bottom,
+        .border-top {
+            border-color: #334155 !important;
+        }
+
+        /* --- BUTTONS --- */
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-family: var(--font-heading);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            border-color: var(--color-primary);
+            color: white;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #d60036;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 4, 69, 0.3);
+        }
+
+        /* --- HEADER --- */
+        .navbar {
+            background: rgba(15, 23, 42, 0.95);
+            /* Dark Blur */
+            border-bottom: 1px solid #334155;
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar-brand {
+            width: 140px;
+            padding: 0;
+            /* filter: brightness(0) invert(1); */
+            /* Make logo white if needed, but we have a colored logo */
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: #e2e8f0 !important;
+            margin: 0 0.5rem;
+            /* Light text */
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--color-primary) !important;
+        }
+
+        .offcanvas {
+            background-color: var(--color-dark);
+            color: white;
+        }
+
+        .btn-close {
+            filter: invert(1);
+        }
+
+        /* White close button */
+
+        /* --- HERO SECTION --- */
+        .hero-section {
+            position: relative;
+            padding: 8rem 0 6rem;
+            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.8), var(--color-dark)), url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: calc(100vh - var(--nav-height));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-section .display-4 {
+            color: #ffffff;
+        }
+
+        .enquiry-bar-container {
+            background: var(--color-card);
+            /* Dark Card */
+            border: 1px solid #334155;
+            padding: 1.5rem 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            margin-top: 2rem;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .enquiry-tabs .nav-link {
+            border-radius: 50px;
+            padding: 0.5rem 1.5rem;
+            color: #94a3b8;
+            background: transparent;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            border: 1px solid transparent;
+        }
+
+        .enquiry-tabs .nav-link.active {
+            background: var(--color-primary);
+            color: white !important;
+            box-shadow: 0 4px 10px rgba(255, 23, 68, 0.4);
+        }
+
+        .enquiry-input-group {
+            border-right: 1px solid #334155;
+            padding-right: 1rem;
+        }
+
+        .enquiry-input-group:last-child {
+            border-right: none;
+        }
+
+        .form-label-small {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            display: block;
+        }
+
+        .form-control,
+        .form-select {
+            background-color: transparent;
+            color: white !important;
+            border: none;
+        }
+
+        .form-control::placeholder {
+            color: #64748b;
+        }
+
+        .form-select option {
+            background-color: var(--color-card);
+            color: white;
+        }
+
+        #services .service-box {
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+            background: var(--color-card) !important;
+            border-color: #334155 !important;
+        }
+
+        .service-icon {
+            background: rgba(255, 23, 68, 0.1) !important;
+            color: var(--color-primary) !important;
+        }
+
+
+        /* --- PROPERTY CARDS --- */
+        .property-card {
+            background: var(--color-card);
+            border: 1px solid #334155;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+        }
+
+        .property-card:hover {
+            border-color: var(--color-primary);
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-5px);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            z-index: 2;
+        }
+
+        .badge-sell {
+            background: var(--color-primary);
+            color: white;
+        }
+
+        .badge-rent {
+            background: var(--color-secondary);
+            color: white;
+        }
+
+        .property-img-holder {
+            height: 240px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .property-img-holder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .property-card:hover .property-img-holder img {
+            transform: scale(1.05);
+        }
+
+        .property-features {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #334155;
+            border-bottom: 1px solid #334155;
+            padding: 12px 0;
+            margin: 15px 0;
+        }
+
+        .testiMonialSec .btn-outline-dark {
+            height: 42px;
+            width: 42px;
+            border-color: #334155;
+            color: white;
+        }
+
+        .testiMonialSec .btn-outline-dark:hover {
+            background: var(--color-primary);
+            border-color: var(--color-primary);
+        }
+
+        .form-floating>.form-control,
+        .form-floating>.form-select {
+            color: white !important;
+            /* Ensure input text is white */
+            background-color: transparent;
+            border-bottom: 1px solid #475569;
+            border-radius: 0;
+        }
+
+        .form-floating label {
+            color: #94a3b8;
+        }
+
+        /* Restore Floating Label and fix Select Options */
+        .form-floating>.form-control:focus~label,
+        .form-floating>.form-control:not(:placeholder-shown)~label,
+        .form-floating>.form-select~label {
+            color: var(--color-primary);
+            opacity: 1;
+            transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+        }
+
+        select option {
+            background-color: #1e293b !important;
+            color: white !important;
+        }
+
+        /* --- FOOTER DESIGN --- */
+        .main-footer {
+            background-color: #020617;
+            /* Even Darker Footer */
+            color: #94a3b8;
+            padding-top: 8rem;
+            /* Increased Padding */
+            border-top: 1px solid #1e293b;
+        }
+
+        .footer-bottom {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1.5rem 12px;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-left: -12px;
+            margin-right: -12px;
+        }
+
+
+        .footer-brand {
+            display: inline-block;
+            width: 180px;
+            margin-bottom: 8px;
+        }
+
+        .footer-heading {
+            color: white;
+            font-weight: 700;
+            font-family: var(--font-heading);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-primary);
+            padding-left: 5px;
+        }
+
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+        .social-btn:hover {
+            background: var(--color-primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1.5rem 12px;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-left: -12px;
+            margin-right: -12px;
+        }
+
+        @media (max-width: 991.98px) {
+            .enquiry-bar-container {
+                padding: 18px 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .enquiry-input-group {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .main-footer {
+                text-align: center;
+            }
+
+            .liAddress {
+                max-width: 286px;
+            }
+
+            .footerLiManage {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+
+        @media (max-width: 575.98px) {
+            .enquiry-tabs .nav-link {
+                padding: 8px 16px;
+                margin: 0 2px;
+                font-size: 12px;
+            }
+
+            .enquiry-bar-container {
+                padding: 16px 14px;
+            }
+
+            .section-padding {
+                padding: 80px 0;
+            }
+
+            .btn {
+                padding: 8px;
+            }
+
+            .footer-bottom {
+                margin-top: 40px !important;
+            }
+        }
+
+        @media (max-width: 350px) {
+            .enquiry-tabs .nav-link {
+                padding: 6px 12px;
+                margin: 0 1px;
+                font-size: 12px;
+            }
+
+            .enquiry-bar-container {
+                padding: 15px 12px;
+            }
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbarMain">
+
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbarMain">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img loading="eager" src="images/BrandLogo.png" alt="The Vadodara Properties" width="180">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title fw-bold">MENU</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#listings">Properties</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="tel:+918347248111" class="fw-bold text-dark d-none d-lg-block">
+                            <span class="iconify text-primary" data-icon="ph:phone-call-fill"></span> +91 83472 48111
+                        </a>
+                        <a href="#contact" class="btn btn-primary btn-sm px-4">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-white">
+                    <h1 class="display-4 fw-bold mb-3">Find Your <span class="text-primary">Perfect</span> <br>Real
+                        Estate in Vadodara</h1>
+                    <p class="lead mb-4 opacity-75">Your Trusted Partner for Residential, Commercial, and Agricultural
+                        Real Estate.</p>
+                    <div class="enquiry-bar-container text-start mx-auto">
+                        <ul class="nav nav-pills enquiry-tabs mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item"><button class="nav-link active"
+                                    onclick="setContext('Buy Property')">Buy</button></li>
+                            <li class="nav-item"><button class="nav-link"
+                                    onclick="setContext('Rent Property')">Rent</button></li>
+                            <li class="nav-item"><button class="nav-link"
+                                    onclick="setContext('Sell Property')">Sell</button></li>
+                            <li class="nav-item"><button class="nav-link"
+                                    onclick="setContext('Commercial Space')">Commercial</button></li>
+                        </ul>
+
+                        <div id="hero-alert-placeholder"></div>
+
+                        <div class="row align-items-center gx-3">
+                            <input type="hidden" id="bannerContext" value="Buy Property">
+
+                            <div class="col-md-3 enquiry-input-group">
+                                <label class="form-label-small">Name</label>
+                                <input type="text" id="bannerName" class="form-control border-0 p-0 shadow-none fw-bold"
+                                    placeholder="Enter your name">
+                            </div>
+
+                            <div class="col-md-3 enquiry-input-group">
+                                <label class="form-label-small">Phone</label>
+                                <input type="tel" id="bannerPhone" class="form-control border-0 p-0 shadow-none fw-bold"
+                                    placeholder="Enter number">
+                            </div>
+
+                            <div class="col-md-3 enquiry-input-group">
+                                <label class="form-label-small">Requirement</label>
+                                <select id="bannerType" class="form-select border-0 p-0 shadow-none fw-bold text-dark"
+                                    style="cursor: pointer;">
+                                    <option value="Apartment / Flat">Apartment / Flat</option>
+                                    <option value="Villa / Bungalow">Villa / Bungalow</option>
+                                    <option value="Office / Shop">Office / Shop</option>
+                                    <option value="Plot / Land">Plot / Land</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-3">
+                                <button type="button" id="banner-submit-btn"
+                                    class="btn btn-secondary w-100 h-100 rounded-pill d-flex align-items-center justify-content-center gap-2">
+                                    <span class="iconify" data-icon="logos:whatsapp-icon"></span>
+                                    <span>Get Details</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="border-bottom section-padding" id="stats-section">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-6 col-md-3">
+                    <h2 class="text-primary fw-bold mb-0 display-5"><span class="counter" data-target="5">0</span>+
+                    </h2>
+                    <p class="text-muted small fw-bold text-uppercase mt-2">Years Experience</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h2 class="text-secondary fw-bold mb-0 display-5"><span class="counter" data-target="850">0</span>+
+                    </h2>
+                    <p class="text-muted small fw-bold text-uppercase mt-2">Properties Sold</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h2 class="text-primary fw-bold mb-0 display-5"><span class="counter" data-target="1200">0</span>+
+                    </h2>
+                    <p class="text-muted small fw-bold text-uppercase mt-2">Happy Clients</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h2 class="text-secondary fw-bold mb-0 display-5"><span class="counter" data-target="50">0</span>+
+                    </h2>
+                    <p class="text-muted small fw-bold text-uppercase mt-2">Awards Won</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="position-relative pe-lg-5">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1000"
+                            class="img-fluid rounded-4 shadow-lg" alt="Office">
+                        <div class="position-absolute bottom-0 end-0 p-4 rounded-4 shadow-lg m-4 border-start border-5 border-primary"
+                            style="background: var(--color-card);">
+                            <p class="mb-0 fw-bold text-white">Rahul Thakkar</p>
+                            <small class="text-muted">Managing Director</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <span class="section-subtitle">Who We Are</span>
+                    <h2 class="mb-4 display-6">Navigating Your Real Estate Journey with <span
+                            class="text-secondary">Integrity</span></h2>
+                    <p class="text-muted mb-4">Located in Sayaji Ganj, Vadodara, The Vadodara Properties is your premier
+                        real estate consultancy. We specialize in Residential, Commercial, Industrial, and Agricultural
+                        properties.</p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-2 d-flex align-items-center"><span class="iconify text-primary me-2"
+                                data-icon="ph:check-circle-fill"></span> Residential & Commercial</li>
+                        <li class="mb-2 d-flex align-items-center"><span class="iconify text-primary me-2"
+                                data-icon="ph:check-circle-fill"></span> Agricultural Lands</li>
+                        <li class="d-flex align-items-center"><span class="iconify text-primary me-2"
+                                data-icon="ph:check-circle-fill"></span> Industrial Plots</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline-dark rounded-pill px-4">More About Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section-padding bg-light-section">
+        <div class="container">
+            <div class="text-center section-title mb-sm-5 mb-4">
+                <span class="section-subtitle">Our Expertise</span>
+                <h2>One-Stop Real Estate Solutions</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-box h-100"
+                        style="background:var(--color-card); padding:2rem; border-radius:16px; border:1px solid #334155; text-align:center;">
+                        <div class="service-icon"
+                            style="width:70px; height:70px; background:transparent; border: 1px solid #334155; color:#FF1744; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem; margin:0 auto 1.5rem;">
+                            <span class="iconify" data-icon="ph:house-line-bold"></span>
+                        </div>
+                        <h4>Residential Sales</h4>
+                        <p class="text-muted small">Buy and sell apartments, villas, and bungalows in prime locations.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-box h-100"
+                        style="background:var(--color-card); padding:2rem; border-radius:16px; border:1px solid #334155; text-align:center;">
+                        <div class="service-icon"
+                            style="width:70px; height:70px; background:transparent; border: 1px solid #334155; color:#FF1744; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem; margin:0 auto 1.5rem;">
+                            <span class="iconify" data-icon="ph:key-bold"></span>
+                        </div>
+                        <h4>Rental Services</h4>
+                        <p class="text-muted small">Connecting tenants with landlords for residential and commercial
+                            rentals.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-box h-100"
+                        style="background:var(--color-card); padding:2rem; border-radius:16px; border:1px solid #334155; text-align:center;">
+                        <div class="service-icon"
+                            style="width:70px; height:70px; background:transparent; border: 1px solid #334155; color:#FF1744; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem; margin:0 auto 1.5rem;">
+                            <span class="iconify" data-icon="ph:plant-bold"></span>
+                        </div>
+                        <h4>Agricultural Land</h4>
+                        <p class="text-muted small">Expert consultancy for buying and selling farm houses and
+                            agricultural plots.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-box h-100"
+                        style="background:var(--color-card); padding:2rem; border-radius:16px; border:1px solid #334155; text-align:center;">
+                        <div class="service-icon"
+                            style="width:70px; height:70px; background:transparent; border: 1px solid #334155; color:#FF1744; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem; margin:0 auto 1.5rem;">
+                            <span class="iconify" data-icon="ph:buildings-bold"></span>
+                        </div>
+                        <h4>Commercial Spaces</h4>
+                        <p class="text-muted small">Offices, shops, and pre-leased properties for business and
+                            investment.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-box h-100"
+                        style="background:var(--color-card); padding:2rem; border-radius:16px; border:1px solid #334155; text-align:center;">
+                        <div class="service-icon"
+                            style="width:70px; height:70px; background:transparent; border: 1px solid #334155; color:#FF1744; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem; margin:0 auto 1.5rem;">
+                            <span class="iconify" data-icon="ph:factory-bold"></span>
+                        </div>
+                        <h4>Industrial Property</h4>
+                        <p class="text-muted small">Buying, selling, and leasing of industrial plots, warehouses, and
+                            sheds.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-box h-100"
+                        style="background:var(--color-card); padding:2rem; border-radius:16px; border:1px solid #334155; text-align:center;">
+                        <div class="service-icon"
+                            style="width:70px; height:70px; background:transparent; border: 1px solid #334155; color:#FF1744; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem; margin:0 auto 1.5rem;">
+                            <span class="iconify" data-icon="ph:user-gear-bold"></span>
+                        </div>
+                        <h4>Property Caretaker</h4>
+                        <p class="text-muted small">Comprehensive caretaker services for maintaining your vacant
+                            properties.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="listings" class="section-padding ">
+        <div class="container">
+            <div class="d-flex flex-wrap gap-3 justify-content-between align-items-end mb-4 mb-sm-5">
+                <div>
+                    <span class="section-subtitle">Featured Portfolio</span>
+                    <h2 class="mb-0">Latest Properties</h2>
+                </div>
+                <div class="controls">
+                    <button class="btn btn-sm btn-outline-dark active mix-ctrl" data-filter="all">All</button>
+                    <button class="btn btn-sm btn-outline-dark mix-ctrl" data-filter=".sell">For Sale</button>
+                    <button class="btn btn-sm btn-outline-dark mix-ctrl" data-filter=".rent">For Rent</button>
+                </div>
+            </div>
+
+            <div class="row g-4" id="property-grid">
+                <div class="col-md-6 col-xl-4 mix sell">
+                    <div class="property-card">
+                        <div class="card-badge badge-sell">For Sale</div>
+                        <a href="https://images.unsplash.com/photo-1665827488607-2c8f6ed98a69?q=80&w=1000"
+                            data-fancybox="gallery" class="property-img-holder d-block">
+                            <img loading="lazy"
+                                src="https://images.unsplash.com/photo-1665827488607-2c8f6ed98a69?q=80&w=800&auto=format&fit=crop"
+                                alt="Property">
+                        </a>
+                        <div class="p-lg-4 p-3">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="property-price mb-0">₹ 65.5 Lac</h5>
+                                <small class="text-success fw-bold"><span class="iconify"
+                                        data-icon="ph:seal-check-fill"></span> Verified</small>
+                            </div>
+                            <h5 class="mb-1 text-truncate">3 BHK Luxury Apartment</h5>
+                            <p class="text-muted small mb-3"><span class="iconify" data-icon="ph:map-pin-fill"></span>
+                                Gotri Road, Vadodara</p>
+                            <div class="property-features">
+                                <span class="feat-item"><span class="iconify fs-5 text-secondary"
+                                        data-icon="ph:bed"></span> 3 Beds</span>
+                                <span class="feat-item"><span class="iconify fs-5 text-secondary"
+                                        data-icon="ph:shower"></span> 3 Bath</span>
+                                <span class="feat-item"><span class="iconify fs-5 text-secondary"
+                                        data-icon="ph:ruler"></span> 1850 Sqft</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4 mix rent">
+                    <div class="property-card">
+                        <div class="card-badge badge-rent">For Rent</div>
+                        <a href="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000"
+                            data-fancybox="gallery" class="property-img-holder d-block">
+                            <img loading="lazy"
+                                src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop"
+                                alt="Office">
+                        </a>
+                        <div class="p-lg-4 p-3">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="property-price mb-0">₹ 35,000 <small
+                                        class="text-muted fs-6 fw-normal">/mo</small></h5>
+                                <small class="text-muted">Furnished</small>
+                            </div>
+                            <h5 class="mb-1 text-truncate">Corporate Office Space</h5>
+                            <p class="text-muted small mb-3"><span class="iconify" data-icon="ph:map-pin-fill"></span>
+                                Alkapuri, Vadodara</p>
+                            <div class="property-features">
+                                <span class="feat-item"><span class="iconify fs-5 text-secondary"
+                                        data-icon="ph:squares-four"></span> 1 Hall</span>
+                                <span class="feat-item"><span class="iconify fs-5 text-secondary"
+                                        data-icon="ph:toilet"></span> 2 Rest</span>
+                                <span class="feat-item"><span class="iconify fs-5 text-secondary"
+                                        data-icon="ph:ruler"></span> 1200 Sqft</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4 mix sell">
+                    <div class="property-card">
+                        <div class="card-badge badge-sell">For Sale</div>
+                        <a href="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1000"
+                            data-fancybox="gallery" class="property-img-holder d-block">
+                            <img loading="lazy"
+                                src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=800&auto=format&fit=crop"
+                                alt="Villa">
+                        </a>
+                        <div class="p-lg-4 p-3">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="property-price mb-0">₹ 2.5 Cr</h5>
+                                <small class="text-success fw-bold"><span class="iconify"
+                                        data-icon="ph:seal-check-fill"></span> Premium</small>
+                            </div>
+                            <h5 class="mb-1 text-truncate">4 BHK Modern Villa</h5>
+                            <p class="text-muted small mb-3"><span class="iconify" data-icon="ph:map-pin-fill"></span>
+                                Vasna Bhayli, Vadodara</p>
+                            <div class="property-features">
+                                <span class="feat-item"><span class="iconify fs-5 text-secondary"
+                                        data-icon="ph:bed"></span> 4 Beds</span>
+                                <span class="feat-item"><span class="iconify fs-5 text-secondary"
+                                        data-icon="ph:car"></span> 2 Park</span>
+                                <span class="feat-item"><span class="iconify fs-5 text-secondary"
+                                        data-icon="ph:ruler"></span> 3500 Sqft</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="#contact" class="btn btn-primary px-5">Contact Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="section-padding bg-light-section">
+        <div class="container">
+            <div class="text-center section-title mb-4 mb-sm-5">
+                <span class="section-subtitle">How It Works</span>
+                <h2>Your Journey to a New Home</h2>
+            </div>
+            <div class="row text-center g-4">
+                <div class="col-md-4">
+                    <div class="position-relative p-sm-4 p-3">
+                        <span
+                            style="position: absolute; top: -30px; left: 0; font-size: 4rem; font-weight: 800; z-index: -1; color: #e2e8f0;">01</span>
+                        <div class="mb-3"><span class="iconify text-primary display-4"
+                                data-icon="ph:magnifying-glass-duotone"></span></div>
+                        <h4>Search & Shortlist</h4>
+                        <p class="text-muted mb-0">Browse our verified listings or tell us your requirements directly.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="position-relative p-sm-4 p-3">
+                        <span
+                            style="position: absolute; top: -30px; left: 0; font-size: 4rem; font-weight: 800; z-index: -1; color: #e2e8f0;">02</span>
+                        <div class="mb-3"><span class="iconify text-primary display-4"
+                                data-icon="ph:calendar-check-duotone"></span></div>
+                        <h4>Site Visit</h4>
+                        <p class="text-muted mb-0">Schedule a visit. We arrange transportation and guide you through the
+                            property.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="position-relative p-sm-4 p-3">
+                        <span
+                            style="position: absolute; top: -30px; left: 0; font-size: 4rem; font-weight: 800; z-index: -1; color: #e2e8f0;">03</span>
+                        <div class="mb-3"><span class="iconify text-primary display-4"
+                                data-icon="ph:handshake-duotone"></span></div>
+                        <h4>Deal & Move</h4>
+                        <p class="text-muted mb-0">We handle negotiation, paperwork, and loans. You just take the keys.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding testiMonialSec">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <span class="section-subtitle">Testimonials</span>
+                    <h2 class="mb-4">What Our Clients Say</h2>
+                    <p class="text-muted mb-4">We have helped over 1200 families find their homes in Vadodara. Here is
+                        what they have to say.</p>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-outline-dark rounded-circle p-2 swiper-prev"><span class="iconify"
+                                data-icon="ph:arrow-left"></span></button>
+                        <button class="btn btn-outline-dark rounded-circle p-2 swiper-next"><span class="iconify"
+                                data-icon="ph:arrow-right"></span></button>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="swiper testimonial-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="p-sm-4 p-3 rounded-4 h-100"
+                                    style="background: var(--color-card); border: 1px solid #334155;">
+                                    <div class="text-warning mb-3">★★★★★</div>
+                                    <p class="fst-italic text-muted">"Labh Property made my home buying experience in
+                                        Vadodara very smooth. Rahul Sir helped with the loan process too!"</p>
+                                    <h6 class="fw-bold mt-3 mb-0 text-white">- Amit Patel</h6>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="p-sm-4 p-3 rounded-4 h-100"
+                                    style="background: var(--color-card); border: 1px solid #334155;">
+                                    <div class="text-warning mb-3">★★★★★</div>
+                                    <p class="fst-italic text-muted">"Best real estate consultants in Vadodara. Very
+                                        transparent documentation and genuine advice."</p>
+                                    <h6 class="fw-bold mt-3 mb-0 text-white">- Sneha Shah</h6>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="p-sm-4 p-3 rounded-4 h-100"
+                                    style="background: var(--color-card); border: 1px solid #334155;">
+                                    <div class="text-warning mb-3">★★★★★</div>
+                                    <p class="fst-italic text-muted">"Excellent service for NRI clients. They handled my
+                                        property management perfectly."</p>
+                                    <h6 class="fw-bold mt-3 mb-0 text-white">- Rohan Mehta</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding position-relative"
+        style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-top: 1px solid #334155;">
+        <div class="container">
+            <div class="row g-md-5 g-4 align-items-center">
+                <div class="col-lg-5 text-white">
+                    <h2 class="display-6 mb-4">Let's Find Your Dream Property Today</h2>
+                    <p class="mb-4 mb-sm-5 opacity-75">Visit our office or fill out the form. We are available 7 days a
+                        week.</p>
+
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <div class="bg-white text-primary rounded-circle p-3 d-flex"><span class="iconify fs-4"
+                                data-icon="ph:map-pin-fill"></span></div>
+                        <div>
+                            <h6 class="mb-0">Office Address</h6>
+                            <small class="opacity-75"><a class="text-decoration-none text-white"
+                                    href="https://share.google/yqGTSetiaS1eg7W7K" target="_blank">Bhayli, Sayaji Ganj,
+                                    Vadodara-390020, Gujarat</a></small>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <div class="bg-white text-primary rounded-circle p-3 d-flex"><span class="iconify fs-4"
+                                data-icon="ph:phone-fill"></span></div>
+                        <div>
+                            <h6 class="mb-0">Call Us</h6>
+                            <small class="opacity-75"><a class="text-decoration-none text-white"
+                                    href="tel:+918347248111">+91 83472 48111</a></small>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <div class="bg-white text-primary rounded-circle p-3 d-flex"><span class="iconify fs-4"
+                                data-icon="ph:envelope-simple-fill"></span></div>
+                        <div>
+                            <h6 class="mb-0">Email Us</h6>
+                            <small class="opacity-75"><a class="text-decoration-none text-white"
+                                    href="mailto:info@labhgroup.in">info@labhgroup.in</a></small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="p-md-5 p-3 rounded-4 shadow-lg" style="background: var(--color-card);">
+                        <h4 class="mb-4 text-white">Request a Callback</h4>
+
+                        <div id="contact-alert-placeholder"></div>
+
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="contactName" placeholder="Name">
+                                        <label for="contactName">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="tel" class="form-control" id="contactPhone" placeholder="Phone">
+                                        <label for="contactPhone">Phone Number</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="contactService">
+                                            <option>Buy Property</option>
+                                            <option>Sell Property</option>
+                                            <option>Rent</option>
+                                            <option>Loan Inquiry</option>
+                                        </select>
+                                        <label for="contactService">Interested In</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Message" id="contactMessage"
+                                            style="height: 100px"></textarea>
+                                        <label for="contactMessage">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="button" id="contact-whatsapp-btn"
+                                        class="btn btn-secondary w-100 py-sm-3 py-2 d-flex align-items-center justify-content-center gap-2">
+                                        <span class="iconify" data-icon="logos:whatsapp-icon"></span> Send via WhatsApp
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <a href="#" class="footer-brand"><img loading="lazy" src="images/BrandLogo.png"
+                            alt="The Vadodara Properties"
+                            style="background: white; padding: 10px; border-radius: 8px;"></a>
+                    <p class="mb-4 opacity-75">Your trusted partner for all real estate needs in Vadodara. Residential,
+                        Commercial, Industrial, and Agricultural solutions under one roof.</p>
+                    <div class="d-flex justify-content-center justify-content-md-start">
+                        <a target="_blank" href="https://www.instagram.com/thevadodaraproperties"
+                            class="social-btn"><span class="iconify" data-icon="ph:instagram-logo-fill"></span></a>
+                        <a target="_blank"
+                            href="https://www.justdial.com/Vadodara/The-Vadodara-Properties-Tvp-Sayaji-Ganj/0265PX265-X265-230610134057-F6I1_BZDET"
+                            class="social-btn"><span class="iconify" data-icon="simple-icons:justdial"></span></a>
+                        <a target="_blank" href="https://share.google/yqGTSetiaS1eg7W7K" class="social-btn"><span
+                                class="iconify" data-icon="ph:google-logo-fill"></span></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#listings">Properties</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-heading">Our Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Residential Sales</a></li>
+                        <li><a href="#">Commercial Space</a></li>
+                        <li><a href="#">Industrial Plots</a></li>
+                        <li><a href="#">Agricultural Land</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-heading">Contact Info</h5>
+                    <ul class="footer-links footerLiManage">
+                        <li class="d-flex liAddress align-items-start gap-2">
+                            <span class="iconify text-primary mt-1 flex-shrink-0" data-icon="ph:map-pin-fill"></span>
+                            <span><a class="text-decoration-none" target="_blank"
+                                    href="https://share.google/yqGTSetiaS1eg7W7K">Bhayli, Sayaji Ganj, Vadodara-390020,
+                                    Gujarat</a></span>
+                        </li>
+                        <li class="d-flex liAddress align-items-center gap-2">
+                            <span class="iconify text-primary flex-shrink-0" data-icon="ph:phone-fill"></span>
+                            <span><a href="tel:+918347248111" class="text-decoration-none">+91 83472 48111</a></span>
+                        </li>
+                        <li class="d-flex liAddress align-items-center gap-2">
+                            <span class="iconify text-primary flex-shrink-0" data-icon="ph:envelope-fill"></span>
+                            <span><a href="mailto:info@thevadodaraproperties.com"
+                                    class="text-decoration-none">info@thevadodaraproperties.com</a></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom text-center">
+                <p class="mb-0 small opacity-50">© 2026 The Vadodara Properties. All Rights Reserved. Designed by Shriii
+                    Tracking Solution</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script>
+        // 1. Banner Context Logic
+        function setContext(context) {
+            document.getElementById('bannerContext').value = context;
+            const buttons = document.querySelectorAll('.enquiry-tabs .nav-link');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // 2. Animated Counters Logic
+
+            const counters = document.querySelectorAll('.counter');
+            const duration = 2000; // Animation takes exactly 2 seconds
+
+            const observerOptions = {
+                root: null,
+                threshold: 0.5 // Start when 50% of the section is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = +counter.getAttribute('data-target');
+                        const startTime = performance.now();
+
+                        const updateCount = (currentTime) => {
+                            const elapsedTime = currentTime - startTime;
+                            const progress = Math.min(elapsedTime / duration, 1); // Cap progress at 1 (100%)
+
+                            // Calculate current number based on progress percentage
+                            // Using Math.floor ensures we hit integers
+                            counter.innerText = Math.floor(progress * target);
+
+                            if (progress < 1) {
+                                requestAnimationFrame(updateCount);
+                            } else {
+                                counter.innerText = target; // Ensure final number is accurate
+                            }
+                        };
+
+                        requestAnimationFrame(updateCount);
+                        observer.unobserve(counter); // Run only once
+                    }
+                });
+            }, observerOptions);
+
+            counters.forEach(counter => {
+                observer.observe(counter);
+            });
+
+
+
+            // 3. Swiper for Testimonials
+            new Swiper('.testimonial-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                navigation: { nextEl: '.swiper-next', prevEl: '.swiper-prev' },
+                breakpoints: {
+                    768: { slidesPerView: 2 }
+                }
+            });
+
+            // 4. MixItUp
+            const container = document.querySelector('#property-grid');
+            if (container) {
+                mixitup(container, {
+                    selectors: { target: '.mix' },
+                    animation: { duration: 300 }
+                });
+            }
+
+            // 5. Fancybox
+            Fancybox.bind("[data-fancybox]", {});
+
+            // 6. WhatsApp Helpers
+            // --- Helper Function to Show Bootstrap Alert ---
+            function showBootstrapAlert(placeholderId, message) {
+                const placeholder = document.getElementById(placeholderId);
+                if (!placeholder) return;
+
+                // Create Alert HTML
+                placeholder.innerHTML = `
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <span class="iconify me-2" data-icon="ph:warning-circle-fill" style="font-size: 1.2em; vertical-align: -2px;"></span>
+            ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    `;
+            }
+
+            // --- WhatsApp Helper ---
+            // --- Helper Function to Show Bootstrap Alert ---
+            function showBootstrapAlert(placeholderId, message) {
+                const placeholder = document.getElementById(placeholderId);
+                if (!placeholder) return;
+
+                placeholder.innerHTML = `
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <span class="iconify me-2" data-icon="ph:warning-circle-fill" style="font-size: 1.2em; vertical-align: -2px;"></span>
+            ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    `;
+            }
+
+            // --- WhatsApp Helper ---
+            function openWhatsApp(text) {
+                const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+                const url = isMobile
+                    ? `https://wa.me/918347248111?text=${text}`
+                    : `https://web.whatsapp.com/send?phone=918347248111&text=${text}`;
+                window.open(url, '_blank');
+            }
+
+            // --- 1. Hero Banner Logic ---
+            document.getElementById('banner-submit-btn').addEventListener('click', function () {
+                const nameInput = document.getElementById('bannerName');
+                const phoneInput = document.getElementById('bannerPhone');
+                const typeInput = document.getElementById('bannerType');
+                const contextInput = document.getElementById('bannerContext');
+                const alertId = 'hero-alert-placeholder';
+
+                const name = nameInput.value.trim();
+                const phone = phoneInput.value.trim();
+                const type = typeInput.value;
+                const context = contextInput.value;
+
+                // Validation
+                if (!name || !phone) {
+                    showBootstrapAlert(alertId, 'Please enter your <strong>Name</strong> and <strong>Phone Number</strong> to proceed.');
+                    return;
+                }
+
+                // Success - Clear Alert & Send
+                document.getElementById(alertId).innerHTML = '';
+                const text = `*New Website Enquiry*%0A*Goal:* ${context}%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Looking For:* ${type}`;
+                openWhatsApp(text);
+
+                // --- RESET INPUTS ---
+                nameInput.value = '';
+                phoneInput.value = '';
+                // Optional: Reset dropdown to first option
+                // typeInput.selectedIndex = 0; 
+            });
+
+            // --- 2. Contact Form Logic ---
+            document.getElementById('contact-whatsapp-btn').addEventListener('click', function () {
+                const nameInput = document.getElementById('contactName');
+                const phoneInput = document.getElementById('contactPhone');
+                const serviceInput = document.getElementById('contactService');
+                const msgInput = document.getElementById('contactMessage');
+                const alertId = 'contact-alert-placeholder';
+
+                const name = nameInput.value.trim();
+                const phone = phoneInput.value.trim();
+                const service = serviceInput.value;
+                const msg = msgInput.value.trim();
+
+                // Validation
+                if (!name || !phone) {
+                    showBootstrapAlert(alertId, 'Please enter your <strong>Name</strong> and <strong>Phone Number</strong>.');
+                    return;
+                }
+
+                // Success - Clear Alert & Send
+                document.getElementById(alertId).innerHTML = '';
+                const text = `*General Inquiry*%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Service:* ${service}%0A*Message:* ${msg}`;
+                openWhatsApp(text);
+
+                // --- RESET INPUTS ---
+                nameInput.value = '';
+                phoneInput.value = '';
+                msgInput.value = '';
+                serviceInput.selectedIndex = 0; // Resets dropdown to first option
+            });
+        });
+    </script>
+</body>
+
+</html>
